@@ -1,0 +1,67 @@
+<!doctype html><html lang=nl dir=ltr><head><meta name=generator content="Hugo 0.81.0"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="&ldquo;Everything is connected&rdquo; Dirk Gently
+ Wat is Linny #  Linny is een database en wikisysteem voor persoonlijk gebruik. Een verzameling Markdown-bestanden en een index vormen de inhoud van database. De losse markdown-bestanden zijn de losse data-elementen van de database. De front-matter-blokken bovenaan de markdown-bestanden definieren de document-kenmerken en de relaties met andere documenten.
+Documenten worden automatisch gerubriceerd volgens een door de gebruiker gedefinieerd classificatiesysteem. Tijdens het werken met de database groeit en verfijnd het classificatiesysteem of datamodel vanzelf."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Linny Introductie"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://linden-project.github.io/nl/docs/linny.vim/"><title>Linny Introductie | Linden Project</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=alternate hreflang=en href=https://linden-project.github.io/docs/linny.vim/ title=Linny.vim><link rel=stylesheet href=/book.min.2bc2364a4a4b31f0ec1debecf0a8f90a840821f143dfe1ac6a0f7cbcbdcf64ac.css integrity="sha256-K8I2SkpLMfDsHevs8Kj5CoQIIfFD3+Gsag98vL3PZKw="><script defer src=/nl.search.min.54c2a098a2e6235405c664f88039c682eb4e524066e7010e656e7cddecebd320.js integrity="sha256-VMKgmKLmI1QFxmT4gDnGgutOUkBm5wEOZW583ezr0yA="></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk="></script><link rel=alternate type=application/rss+xml href=https://linden-project.github.io/nl/docs/linny.vim/index.xml title="Linden Project"></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/nl><span>Linden Project</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://linden-project.github.io/nl/docs/linny.vim/ class=active>Linny Introductie</a><ul><li><a href=https://linden-project.github.io/nl/docs/linny.vim/handleiding/>Linny Vim Handleiding</a></li></ul></li></ul></nav><script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Linny Introductie</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#wat-is-linny>Wat is Linny</a></li><li><a href=#taxonomieën>Taxonomieën</a><ul><li><a href=#linny-is-een-vim-plugin>Linny is een Vim-plugin</a></li><li><a href=#ook-nog-linnyx-de-indexer>Ook nog Linnyx, de indexer</a></li></ul></li><li><a href=#de-linny-database>De Linny-database</a><ul><li><a href=#bestanden-en-bestandslocaties>Bestanden en bestandslocaties</a><ul><li><a href=#wimpi-root-wimpidb>wimpi-root ~/wimpidb</a></li><li><a href=#de-index-en-state-bestanden>De index en state-bestanden</a></li></ul></li></ul></li><li><a href=#gebruikersinterface>Gebruikersinterface</a><ul><li><a href=#navigatiezijpaneel>Navigatiezijpaneel</a></li><li><a href=#1e-niveau-het-startscherm>1e niveau: Het startscherm</a></li><li><a href=#2e-niveau-overzicht-taxonomie>2e niveau: Overzicht taxonomie</a></li><li><a href=#3e-niveau-overzicht-verzameling-documenten>3e niveau: Overzicht verzameling documenten</a></li></ul></li></ul></nav></aside></header><article class=markdown><blockquote><p>&ldquo;Everything is connected&rdquo; Dirk Gently</p></blockquote><h1 id=wat-is-linny>Wat is Linny
+<a class=anchor href=#wat-is-linny>#</a></h1><p>Linny is een database en wikisysteem voor persoonlijk gebruik. Een verzameling
+Markdown-bestanden en een index vormen de inhoud van database. De losse
+markdown-bestanden zijn de losse data-elementen van de database. De
+front-matter-blokken bovenaan de markdown-bestanden definieren de
+document-kenmerken en de relaties met andere documenten.</p><p>Documenten worden automatisch gerubriceerd volgens een door de gebruiker
+gedefinieerd classificatiesysteem. Tijdens het werken met de database groeit en
+verfijnd het classificatiesysteem of datamodel vanzelf. Linny faciliteert de
+gebruiker met hulpmiddelen om navigeren en te ordenen.</p><p>Een Linny database kan groeiten tot een zeer complexe model met duidenden
+documenten. Door de eenvoud in gebruik een kleine database echter al zeer
+behulpzaam en functioneel.</p><h1 id=taxonomieën>Taxonomieën
+<a class=anchor href=#taxonomie%c3%abn>#</a></h1><p>Linny organiseert informatie met door de gebruiker gedefinieerde taxonomieën.</p><p>De taxonomieën worden definieerd in de wiki_indexes.yml in de config directory.
+Een markdown bestand kan aan meerdere taxonomieën wordt toegekend als waarde.
+Deze toekenning wordt gedaan in de <strong>front matter</strong> van het markdown bestand.</p><h2 id=linny-is-een-vim-plugin>Linny is een Vim-plugin
+<a class=anchor href=#linny-is-een-vim-plugin>#</a></h2><p>Linny is ontwikkeld in Vim als Vim-plugin. Als je wilt werken met Linny moet je
+al kunnen werken met Vim. De werkwijze van Linny is echter universeel
+toepasbaar. Ik sluit niet uit dat er ook plugin&rsquo;s voor andere text-editors of
+markdown-apps zullen ontstaan. Ik kan me ook voorstellen dat er mobiele apps
+voor Linny zullen komen.</p><h2 id=ook-nog-linnyx-de-indexer>Ook nog Linnyx, de indexer
+<a class=anchor href=#ook-nog-linnyx-de-indexer>#</a></h2><p>Naast de Vim-plugin die zorgt voor de gebruikersinterface, heeft Linny een
+indexer, <em>wimpix</em>. De indexer leest de front-matter-blokken van alle
+markdown-bestanden en maakt hiermee index-bestanden. Deze index-bestanden
+zorgen ervoor dat de navigatie snel is en de database doorzoekbaar.</p><h1 id=de-linny-database>De Linny-database
+<a class=anchor href=#de-linny-database>#</a></h1><p>De database is opgeslagen in 4 onderdelen.</p><ul><li>de markdown-bestanden</li><li>de taxonomie-configuratie-bestanden</li><li>de index-bestanden</li><li>de gebruikers interface toestand-bestanden</li></ul><p>De eerste twee vormen samen de data en het datamodel van de database. Deze
+mogen nooit verloren gaan en moeten dus goed gebackupped worden.</p><p>De laatste twee zijn hulp-bestanden die door de vim-plugin en de indexer
+continu worden vernieuwd. Het is geen ramp als deze verloren gaan. Ze zijn
+nodig tijdens het gebruik van Linny, en kunnen altijd weer opnieuw worden
+gegenereerd.</p><h2 id=bestanden-en-bestandslocaties>Bestanden en bestandslocaties
+<a class=anchor href=#bestanden-en-bestandslocaties>#</a></h2><p>De locatie van de database en hulpbestanden kunnen door de gebruiker worden
+geconfigureerd. Zonder configuratie kiest Linny standaard locaties.</p><h3 id=wimpi-root-wimpidb>wimpi-root ~/wimpidb
+<a class=anchor href=#wimpi-root-wimpidb>#</a></h3><p>De wimpi-root is de directory met alle taxonomie-configuratie- en
+markdown-bestanden. Er zijn in deze directories geen sub-directories.</p><pre><code>~/wimpidb/config/
+~/wimpidb/wiki/
+</code></pre><p>In wimpidb/wiki staan alle markdown-bestanden.
+In /config staan alle taxonomie-configuratie-bestanden opgeslagen in yaml-formaat.</p><p>Zorg ervoor dat je de wimpi-root regelmatig back-upt.</p><h3 id=de-index-en-state-bestanden>De index en state-bestanden
+<a class=anchor href=#de-index-en-state-bestanden>#</a></h3><p>De index- en state-bestanden bevinden zich standaard op een andere locatie. Dit
+is bewust gekozen om het mogelijk dat de wimpi-root directory in een directory
+bevind die door een cloud-service, zoals Dropbox of Stack wordt ge-syncd. De
+index- en state-bestanden zijn in json-formaat opgeslagen en voor de gebruiker
+verder niet interessant.</p><p>~/.wimpi/index/
+~/.wimpi/state/</p><h1 id=gebruikersinterface>Gebruikersinterface
+<a class=anchor href=#gebruikersinterface>#</a></h1><p>Linny heeft een aantal interface onderdelen die de gebruiker helpen om
+efficiënt met de documentendatabase te werken.</p><p>De hier beschreven onderdelen zijn:</p><ul><li>navigatiezijpaneel</li><li>het kenmerken-zoeker binnen front matter</li></ul><h2 id=navigatiezijpaneel>Navigatiezijpaneel
+<a class=anchor href=#navigatiezijpaneel>#</a></h2><p>Het navigatiezijpaneel biedt de belangrijkste manier om te navigeren door de
+database, en uiteindelijk het bestand te openen waar je naar op zoek was. De
+navigatie kent drie niveau&rsquo;s.</p><h2 id=1e-niveau-het-startscherm>1e niveau: Het startscherm
+<a class=anchor href=#1e-niveau-het-startscherm>#</a></h2><p>Het 1e niveau biedt verschillende manieren om te navigeren door de
+database.</p><ul><li>lijst met favoriete markdown-bestanden</li><li>lijst favoriete classificaties</li><li>lijst van alle taxonomieën</li><li>recente gewijzigde markdown-bestanden</li></ul><blockquote><p>TODO SCHERMAFBEELDING</p></blockquote><h2 id=2e-niveau-overzicht-taxonomie>2e niveau: Overzicht taxonomie
+<a class=anchor href=#2e-niveau-overzicht-taxonomie>#</a></h2><p>Het 2e niveau toont een overzicht van verzamelingen binnen een enkele
+taxonomie. Stel je hebt de taxonomie <em>project</em> gedefinieerd. Als je op het
+startscherm hebt geklikt op <em>Projecten</em> toont nu het 2e niveau alle
+verschillende projecten.</p><p>Andere taxonomieën zouden kunnen zijn <em>klant</em>, of <em>documenttype</em>.</p><blockquote><p>TODO SCHERMAFBEELDING</p></blockquote><h2 id=3e-niveau-overzicht-verzameling-documenten>3e niveau: Overzicht verzameling documenten
+<a class=anchor href=#3e-niveau-overzicht-verzameling-documenten>#</a></h2><p>Het laatste niveau is toont de documenten die allemaal hetzelde kenmerk hebben
+binnen de gekozen taxonomie. Stel je hebt in het 2e niveau op <em>Development
+website big.com</em> geklikt, dan zie je nu alle documenten die het kenmerk
+<em>Project: Development website big.com</em> hebben. Als je nu op een document klikt
+wordt hij door de editor geopend.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div class=book-languages tabindex=0 aria-haspopup=true><ul><li class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+Nederlands</li></ul><ul class=book-languages-list><li><a href=https://linden-project.github.io/docs/linny.vim/ class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+English</a></li><li class=active><a href=https://linden-project.github.io/nl/ class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+Nederlands</a></li></ul></div><div><a class="flex align-center" href=https://github.com/alex-shpak/hugo-book/commit/7d845f2ee1e5ee667858821697480a0bbd7cef96 title="Last modified by Pim Snel | April 29, 2021" target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
+<span>April 29, 2021</span></a></div><div><a class="flex align-center" href=https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content.nl/docs/linny.vim/_index.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span>Edit this page</span></a></div></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#wat-is-linny>Wat is Linny</a></li><li><a href=#taxonomieën>Taxonomieën</a><ul><li><a href=#linny-is-een-vim-plugin>Linny is een Vim-plugin</a></li><li><a href=#ook-nog-linnyx-de-indexer>Ook nog Linnyx, de indexer</a></li></ul></li><li><a href=#de-linny-database>De Linny-database</a><ul><li><a href=#bestanden-en-bestandslocaties>Bestanden en bestandslocaties</a><ul><li><a href=#wimpi-root-wimpidb>wimpi-root ~/wimpidb</a></li><li><a href=#de-index-en-state-bestanden>De index en state-bestanden</a></li></ul></li></ul></li><li><a href=#gebruikersinterface>Gebruikersinterface</a><ul><li><a href=#navigatiezijpaneel>Navigatiezijpaneel</a></li><li><a href=#1e-niveau-het-startscherm>1e niveau: Het startscherm</a></li><li><a href=#2e-niveau-overzicht-taxonomie>2e niveau: Overzicht taxonomie</a></li><li><a href=#3e-niveau-overzicht-verzameling-documenten>3e niveau: Overzicht verzameling documenten</a></li></ul></li></ul></nav></div></aside></main></body></html>
