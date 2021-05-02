@@ -11,15 +11,6 @@ menu:
 weight: 1
 ---
 
-- [x] intro
-- [x] setup carl
-- [x] setup linny
-- [x] add content
-- [x] add taxonomies
-- [x] add term
-- [x] widgets
-- [ ] conclusion
-
 # Introduction
 
 This is a short tutorial to get you started with Linny.vim and Carl. Linny.vim

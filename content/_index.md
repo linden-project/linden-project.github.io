@@ -24,6 +24,8 @@ Linden is intended for personal use and currently is a personal project too. I
 welcome people to join me in designing and creating tools for having our extra
 brains.
 
+**To get started read the quick start tutorial [Your personal Wiki with Linny.vim and Carl](/posts/tutorial-linny-and-carl/)**
+
 ## Specifications
 - [Linden Spec 0.2](docs/linden-specification/version-0.2)
 
