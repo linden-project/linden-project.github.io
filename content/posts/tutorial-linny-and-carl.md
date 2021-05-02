@@ -194,15 +194,7 @@ please submit an issue in the
 tracker](https://github.com/linden-project/carl/issues). Or send me a twitter
 DM at [@mipselaer](https://twitter.com/mipselaer).
 
-
-
-
-
-
-
-
-
-
-
-
+PS. If you see typo's or very bad English or if you have other suggestions ...
+please help me improve this tutorial, by clicking the link **[Edit this
+page](https://github.com/linden-project/linden-project.github.io/edit/main/content/posts/tutorial-linny-and-carl.md)**
 
