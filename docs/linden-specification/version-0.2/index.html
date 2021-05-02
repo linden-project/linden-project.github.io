@@ -1,0 +1,117 @@
+<!doctype html><html lang=en dir=ltr><head><meta name=generator content="Hugo 0.81.0"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Linden Notes Specification 0.2.0 #  The official Lindex Notes Specification.
+Application Setups #  A complete Linden Notes setup works like a good notetaking app and relational database. This can be achieved by seperated components or using one complete application.
+Separate Linden Components #  If you use separate compontents you need to configure them so they can work together. You need the following Linden components.
+ Indexer Navigator Markdown Editor with Linden add-on&rsquo;s  A typical setup with compononent is a Desktop programming editor with a Linden Plugin installed and configured to work with a headless Linden indexer."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Linden Specification Version 0.2.0"><meta property="og:description" content="Linden Notes Specification 0.2.0 #  The official Lindex Notes Specification.
+Application Setups #  A complete Linden Notes setup works like a good notetaking app and relational database. This can be achieved by seperated components or using one complete application.
+Separate Linden Components #  If you use separate compontents you need to configure them so they can work together. You need the following Linden components.
+ Indexer Navigator Markdown Editor with Linden add-on&rsquo;s  A typical setup with compononent is a Desktop programming editor with a Linden Plugin installed and configured to work with a headless Linden indexer."><meta property="og:type" content="article"><meta property="og:url" content="https://linden-project.github.io/docs/linden-specification/version-0.2/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2021-05-02T16:18:14+02:00"><title>Linden Specification Version 0.2.0 | Linden Project</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.2bc2364a4a4b31f0ec1debecf0a8f90a840821f143dfe1ac6a0f7cbcbdcf64ac.css integrity="sha256-K8I2SkpLMfDsHevs8Kj5CoQIIfFD3+Gsag98vL3PZKw="><script defer src=/en.search.min.fc0fe2ddeb613de7809181ac10dcc854e64cb8f52c76c0902c98464d75df2ceb.js integrity="sha256-/A/i3ethPeeAkYGsENzIVOZMuPUsdsCQLJhGTXXfLOs="></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk="></script><script async defer data-website-id=eb832a02-5733-4d73-b41e-8f74ab9e491b src=https://umami.poppygo.io/umami.js></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/><span>Linden Project</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li class=book-section-flat><a href=https://linden-project.github.io/docs/linny.vim/>Linny.vim</a><ul><li><input type=checkbox id=section-c7dab02dd0b5a3a4adbcde8cc031e54d class=toggle>
+<label for=section-c7dab02dd0b5a3a4adbcde8cc031e54d class="flex justify-between"><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/>Wiki Tags</a>
+<span>▾</span></label><ul><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/link/>default link tag</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/dir/>DIR</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/file/>FILE</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/gh/>GH (custom)</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/lin/>LIN</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/shell/>SHELL</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/term/>TERM</a></li><li><a href=https://linden-project.github.io/docs/linny.vim/wiki-tags/vim/>VIM</a></li></ul></li></ul></li><li class=book-section-flat><a href=https://linden-project.github.io/docs/carl/>Carl</a><ul></ul></li><li class=book-section-flat><a href=https://linden-project.github.io/docs/linden-specification/>Linden Specification</a><ul><li><a href=https://linden-project.github.io/docs/linden-specification/version-0.2/ class=active>Linden Specification Version 0.2.0</a></li><li><a href=https://linden-project.github.io/docs/linden-specification/version-0.1/>Linden Specification Version 0.1.2</a></li></ul></li><li class=book-section-flat><a href=https://linden-project.github.io/docs/fred/>Fred</a><ul></ul></li><li class=book-section-flat><a href=https://linden-project.github.io/docs/lindex/>Lindex</a><ul></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Linden Specification Version 0.2.0</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#linden-notes-specification-020>Linden Notes Specification 0.2.0</a><ul><li><a href=#application-setups>Application Setups</a><ul><li><a href=#separate-linden-components>Separate Linden Components</a></li><li><a href=#monolith-application>Monolith Application</a></li></ul></li><li><a href=#directories>Directories</a><ul><li><a href=#root-directory>Root Directory</a></li><li><a href=#the-index-directory>The Index Directory</a></li></ul></li><li><a href=#files>Files</a><ul><li><a href=#config-files-in-linden-rootwikiconfig>Config Files in /linden-root/wikiConfig</a></li><li><a href=#markdown-files-in-linden-rootwiki>Markdown files in /linden-root/wiki</a></li><li><a href=#temporary-index-files-in-de-index-directory>temporary Index Files in de index directory</a></li></ul></li><li><a href=#version-history>Version History</a><ul><li><a href=#011>0.1.1</a></li><li><a href=#012>0.1.2</a></li><li><a href=#020>0.2.0</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=linden-notes-specification-020>Linden Notes Specification 0.2.0
+<a class=anchor href=#linden-notes-specification-020>#</a></h1><p>The official Lindex Notes Specification.</p><h2 id=application-setups>Application Setups
+<a class=anchor href=#application-setups>#</a></h2><p>A complete Linden Notes setup works like a good notetaking app and relational
+database. This can be achieved by seperated components or using one complete
+application.</p><h3 id=separate-linden-components>Separate Linden Components
+<a class=anchor href=#separate-linden-components>#</a></h3><p>If you use separate compontents you need to configure them so they can work
+together. You need the following Linden components.</p><ul><li>Indexer</li><li>Navigator</li><li>Markdown Editor with Linden add-on&rsquo;s</li></ul><p>A typical setup with compononent is a Desktop programming editor with a Linden
+Plugin installed and configured to work with a headless Linden indexer.</p><h3 id=monolith-application>Monolith Application
+<a class=anchor href=#monolith-application>#</a></h3><p>If you have a monolith application all components are build in. A typical
+monolith application would be a mobile Linden Note app.</p><h2 id=directories>Directories
+<a class=anchor href=#directories>#</a></h2><p>There are two main directories.</p><h3 id=root-directory>Root Directory
+<a class=anchor href=#root-directory>#</a></h3><p>A Linden system has a root directory where the permanent content and
+configurations are stored. Linden apps need to know where this directory is
+located.</p><h4 id=back-up>Back-up
+<a class=anchor href=#back-up>#</a></h4><p>The root directory should be part of your back-up.</p><h4 id=synchronize>Synchronize
+<a class=anchor href=#synchronize>#</a></h4><p>You can synchronize the root directory to use your database on more then one
+machine with diffent Linden Clients. Linden Navigator and Indexer can use your
+database as long as this directory is available.</p><h4 id=linden-filesystem>Linden FileSystem
+<a class=anchor href=#linden-filesystem>#</a></h4><p>Inside the root directory is the Linden database filesystem. Directory names
+can not be changed. A minimal filesystem looks like this:</p><p>/config (here are all configuration files stored)
+/wiki (here are all markdown files stored)</p><h3 id=the-index-directory>The Index Directory
+<a class=anchor href=#the-index-directory>#</a></h3><p>If you use a stand alone Linden Indexer all Linden components need to know
+where the directory with index files is located.</p><p>It&rsquo;s recommended to have the index directory outside the root directory. These
+files are constantly regerated, which causes performance problems when using a
+sync service or back-up application.</p><p>You do not need to backup the index directory.</p><h2 id=files>Files
+<a class=anchor href=#files>#</a></h2><h3 id=config-files-in-linden-rootwikiconfig>Config Files in /linden-root/wikiConfig
+<a class=anchor href=#config-files-in-linden-rootwikiconfig>#</a></h3><p>There are three types of Linden Config Files.</p><table><thead><tr><th>config file</th><th>description</th><th>mandatory</th></tr></thead><tbody><tr><td>L1-CONF-TAX-#{tax}.yml</td><td>taxonomy configuration</td><td>no</td></tr><tr><td>L2-CONF-TAX-#{tax}-TRM-{term}.yml</td><td>term configuration</td><td>no</td></tr></tbody></table><h4 id=l1-conf-tax-taxyml>L1-CONF-TAX-#{tax}.yml
+<a class=anchor href=#l1-conf-tax-taxyml>#</a></h4><p>A L1-CONF file is optional. It&rsquo;s a yaml-file that configures one or more views
+when showing a taxonomy with it&rsquo;s terms.</p><h5 id=l1-conf-tax-options>L1-CONF-TAX Options
+<a class=anchor href=#l1-conf-tax-options>#</a></h5><table><thead><tr><th>key path</th><th>yaml-type</th><th>description</th><th>mandatory</th><th>default</th></tr></thead><tbody><tr><td>starred</td><td>boolean</td><td>The singular name of a taxonomy</td><td>no</td><td>taxonony key</td></tr><tr><td>plural</td><td>string</td><td>The plural name of a taxonomy</td><td>no</td><td>null</td></tr><tr><td>description</td><td>string</td><td>Taxonomy description</td><td>no</td><td>null</td></tr><tr><td>views</td><td>hash</td><td>containing one or more views</td><td>no</td><td>null</td></tr><tr><td>views/group_by</td><td>string</td><td>groups all terms by a scalar value in term conf</td><td>no</td><td>null</td></tr><tr><td>views/only</td><td>array with scalars</td><td>only show terms having these scalars or IS_SET or IS_NOT_SET</td><td>no</td><td>null</td></tr><tr><td>views/except</td><td>array with scalars</td><td>exclude showing terms having these scalars or IS_SET or IS_NOT_SET</td><td>no</td><td>null</td></tr><tr><td>views/sort</td><td>string</td><td>can be: date, az, yaml_key</td><td>no</td><td>null</td></tr><tr><td>views/sort_key</td><td>string</td><td>if sort = yaml_key, this is the key in l2_conf used for sorting</td><td>yes if sort=frontmatter_key</td><td>null</td></tr></tbody></table><h5 id=example-of-l1-conf-tax-projectyml>Example of L1-CONF-TAX-project.yml
+<a class=anchor href=#example-of-l1-conf-tax-projectyml>#</a></h5><p>Here&rsquo;s an example L1-configuration:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>
+---
+<span style=color:#f92672>starred</span>: <span style=color:#66d9ef>true</span>
+<span style=color:#f92672>plural</span>: <span style=color:#ae81ff>projects</span>
+<span style=color:#f92672>description</span>: <span style=color:#ae81ff>Projects private and commercial</span>
+<span style=color:#f92672>views</span>:
+  <span style=color:#f92672>by_type</span>:
+    <span style=color:#f92672>group_by</span>: <span style=color:#ae81ff>type</span>
+    <span style=color:#f92672>only</span>:
+    - <span style=color:#f92672>type</span>: <span style=color:#ae81ff>IS_SET</span>
+    <span style=color:#f92672>except</span>:
+    - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+  <span style=color:#f92672>private</span>:
+    <span style=color:#f92672>only</span>:
+    - <span style=color:#f92672>type</span>: <span style=color:#ae81ff>private</span>
+    <span style=color:#f92672>except</span>:
+    - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+  <span style=color:#f92672>commercial</span>:
+    <span style=color:#f92672>only</span>:
+    - <span style=color:#f92672>type</span>: <span style=color:#ae81ff>commercial</span>
+    <span style=color:#f92672>except</span>:
+    - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+  <span style=color:#f92672>archived</span>:
+    <span style=color:#f92672>only</span>:
+      - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+</code></pre></div><h4 id=l2-conf-tax-taxonomy-trm-termyml>L2-CONF-TAX-#{taxonomy}-TRM-#{term}.yml
+<a class=anchor href=#l2-conf-tax-taxonomy-trm-termyml>#</a></h4><p>A L2-CONF file is optional. It&rsquo;s a yaml-file that configures one or more views, and external locations.
+when showing a term with it&rsquo;s values, which are markdown files.</p><h5 id=l2-conf-tax-taxonomy-trm-termyml-options>L2-CONF-TAX-#{taxonomy}-TRM-#{term}.yml Options
+<a class=anchor href=#l2-conf-tax-taxonomy-trm-termyml-options>#</a></h5><table><thead><tr><th>key path</th><th>yaml-type</th><th>description</th><th>mandatory</th><th>default</th></tr></thead><tbody><tr><td>title</td><td>string</td><td>The name of a term</td><td>no</td><td>term key</td></tr><tr><td>description</td><td>string</td><td>Taxonomy description</td><td>no</td><td>null</td></tr><tr><td>starred</td><td>boolean</td><td>Make this term starred</td><td>no</td><td>false</td></tr><tr><td>views</td><td>hash</td><td>containing one or more views</td><td>no</td><td>null</td></tr><tr><td>views/[view_key]/group_by</td><td>string</td><td>groups all terms by a scalar value in term conf</td><td>no</td><td>null</td></tr><tr><td>views/[view_key]/only</td><td>array with scalars</td><td>only show terms having these scalars or IS_SET or IS_NOT_SET</td><td>no</td><td>null</td></tr><tr><td>views/[view_key]/except</td><td>array with scalars</td><td>exclude showing terms having these scalars or IS_SET or IS_NOT_SET</td><td>no</td><td>null</td></tr><tr><td>views/[view_key]/sort</td><td>string</td><td>can be: date, az, frontmatter_key</td><td>no</td><td>null</td></tr><tr><td>views/[view_key]/sort_key</td><td>string</td><td>if sort = frontmatter_key, this is the key used for sorting</td><td>yes if sort=frontmatter_key</td><td>null</td></tr><tr><td>locations</td><td>hash</td><td>containing one or more locations</td><td>no</td><td>null</td></tr><tr><td>locations/[location_key]</td><td>string</td><td>URI of the external location, file, dir of webaddress</td><td>no</td><td>null</td></tr></tbody></table><h5 id=example-of-l2-conf_tax_project_trm_lindenyml>Example of L2-CONF_TAX_project_TRM_linden.yml
+<a class=anchor href=#example-of-l2-conf_tax_project_trm_lindenyml>#</a></h5><p>Here&rsquo;s an example L2-configuration:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>
+---
+<span style=color:#f92672>title</span>: <span style=color:#ae81ff>Linden</span>
+<span style=color:#f92672>infotext</span>: <span style=color:#ae81ff>The Linden Project</span>
+<span style=color:#f92672>starred</span>: <span style=color:#66d9ef>true</span>
+<span style=color:#f92672>locations</span>:
+  <span style=color:#f92672>Linden Spec Repo</span>: <span style=color:#ae81ff>file:///Users/mipmip/dev/linden-spec</span>
+  <span style=color:#f92672>gh.com/mipmip/linny.vim</span>: <span style=color:#ae81ff>https://github.com/mipmip/linny.vim</span>
+  <span style=color:#f92672>gh.com/mipmip/lindex</span>: <span style=color:#ae81ff>https://github.com/mipmip/lindex</span>
+<span style=color:#f92672>type</span>: <span style=color:#ae81ff>Software Project</span>
+<span style=color:#f92672>views</span>:
+  <span style=color:#f92672>type</span>:
+    <span style=color:#f92672>group_by</span>: <span style=color:#ae81ff>type</span>
+    <span style=color:#f92672>except</span>:
+    - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+    - <span style=color:#f92672>trash</span>: <span style=color:#66d9ef>true</span>
+  <span style=color:#f92672>deelpr</span>:
+    <span style=color:#f92672>group_by</span>: <span style=color:#ae81ff>sub_project</span>
+    <span style=color:#f92672>except</span>:
+      - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+  <span style=color:#f92672>arch</span>:
+    <span style=color:#f92672>only</span>:
+      - <span style=color:#f92672>archived</span>: <span style=color:#66d9ef>true</span>
+  <span style=color:#f92672>man-nl</span>:
+    <span style=color:#f92672>only</span>:
+      - <span style=color:#f92672>sub_project</span>: <span style=color:#ae81ff>Linny.vim Handleiding Nederlands</span>
+    <span style=color:#f92672>group_by</span>: <span style=color:#ae81ff>hoofdstuk</span>
+    <span style=color:#f92672>sort</span>: <span style=color:#ae81ff>frontmatter_key</span>
+    <span style=color:#f92672>sort_key</span>: <span style=color:#ae81ff>sortnum</span>
+  <span style=color:#f92672>man-en</span>:
+    <span style=color:#f92672>only</span>:
+      - <span style=color:#f92672>sub_project</span>: <span style=color:#ae81ff>Linny.vim Manual Enlish</span>
+    <span style=color:#f92672>group_by</span>: <span style=color:#ae81ff>paragraph</span>
+    <span style=color:#f92672>sort</span>: <span style=color:#ae81ff>frontmatter_key</span>
+    <span style=color:#f92672>sort_key</span>: <span style=color:#ae81ff>sortnum</span>
+</code></pre></div><h3 id=markdown-files-in-linden-rootwiki>Markdown files in /linden-root/wiki
+<a class=anchor href=#markdown-files-in-linden-rootwiki>#</a></h3><p>All mardown files are stored in the /wiki subdirectory.</p><h3 id=temporary-index-files-in-de-index-directory>temporary Index Files in de index directory
+<a class=anchor href=#temporary-index-files-in-de-index-directory>#</a></h3><table><thead><tr><th>index file</th><th>datatype</th><th>description</th><th>status</th></tr></thead><tbody><tr><td><code>_index_taxonomies.json</code></td><td>array(string)</td><td>all taxonomies index keys</td><td></td></tr><tr><td><code>_index_docs_starred.json</code></td><td>array(string)</td><td>all starred documents</td><td></td></tr><tr><td><code>_index_docs_with_props.json</code></td><td>hash(string, hash)</td><td>all documents and their properties</td><td></td></tr><tr><td><code>_index_docs_tasks.json</code></td><td>hash(string, hash)</td><td>documents with amounts of open/closed/total tasks</td><td></td></tr><tr><td><code>_index_docs_with_title.json</code></td><td></td><td>all documents and their titles</td><td>depreciated</td></tr><tr><td><code>_index_terms_starred.json</code></td><td></td><td>all starred terms</td><td></td></tr><tr><td><code>_indexer_info.json</code></td><td>hash(string, string)</td><td>meta info about the indexer</td><td></td></tr><tr><td><code>L1-INDEX-TAX-#{taxonomy}.json</code></td><td>hash(string, hash)</td><td>hash with names of terms and their properties as hash</td><td></td></tr><tr><td><code>L2-INDEX-TAX-#{taxonomy}-TRM-#{term}.json</code></td><td>array(string)</td><td>array with filenames of member documents in this term</td><td></td></tr></tbody></table><h2 id=version-history>Version History
+<a class=anchor href=#version-history>#</a></h2><h3 id=011>0.1.1
+<a class=anchor href=#011>#</a></h3><p>Initial draft.</p><h3 id=012>0.1.2
+<a class=anchor href=#012>#</a></h3><ul><li>All index file names added.</li><li>All conf file names added.</li><li>All conf options added.</li></ul><h3 id=020>0.2.0
+<a class=anchor href=#020>#</a></h3><ul><li>Removed L0 configuration</li><li>add starred to L1 config file</li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div class=book-languages tabindex=0 aria-haspopup=true><ul><li class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+English</li></ul><ul class=book-languages-list><li class=active><a href=https://linden-project.github.io/ class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+English</a></li><li><a href=https://linden-project.github.io/nl/ class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
+Nederlands</a></li></ul></div><div><a class="flex align-center" href=https://github.com/alex-shpak/hugo-book/commit/8a6f4db829f63e2e15e3ea9b6bf0e0de1e256a51 title="Last modified by Pim Snel | May 2, 2021" target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt=Calendar>
+<span>May 2, 2021</span></a></div><div><a class="flex align-center" href=https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/docs/linden-specification/version-0.2.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span>Edit this page</span></a></div></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#linden-notes-specification-020>Linden Notes Specification 0.2.0</a><ul><li><a href=#application-setups>Application Setups</a><ul><li><a href=#separate-linden-components>Separate Linden Components</a></li><li><a href=#monolith-application>Monolith Application</a></li></ul></li><li><a href=#directories>Directories</a><ul><li><a href=#root-directory>Root Directory</a></li><li><a href=#the-index-directory>The Index Directory</a></li></ul></li><li><a href=#files>Files</a><ul><li><a href=#config-files-in-linden-rootwikiconfig>Config Files in /linden-root/wikiConfig</a></li><li><a href=#markdown-files-in-linden-rootwiki>Markdown files in /linden-root/wiki</a></li><li><a href=#temporary-index-files-in-de-index-directory>temporary Index Files in de index directory</a></li></ul></li><li><a href=#version-history>Version History</a><ul><li><a href=#011>0.1.1</a></li><li><a href=#012>0.1.2</a></li><li><a href=#020>0.2.0</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
