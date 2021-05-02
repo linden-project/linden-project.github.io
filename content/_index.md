@@ -28,7 +28,7 @@ brains.
 - [Linden Spec 0.2](docs/linden-specification/version-0.2)
 
 ## Editor Implementations
-- [linny.vim](https://github.com/linden-project/linny.vim)
+- [linny.vim](https://github.com/linden-project/linny.vim) - Personal Wiki and document database as Vim Plugin
 
 ## Indexers
 - [lindex](https://github.com/linden-project/lindex) - Linden Indexer implemented in crystal-lang
