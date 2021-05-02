@@ -11,7 +11,7 @@ menu:
   main:
     parent: tutorials
 title: Project Reboot
-weight: 10
+weight: 100
 ---
 
 After begin quiet for more then two years, I'm rebooting the Linden Project.

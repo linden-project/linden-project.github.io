@@ -1,23 +1,12 @@
 ---
-title: Linden Specification Version 0.1.2
-weight: 100
+title: Linden Specification Version 0.2.0
+weight: 10
 ---
 
-# Linden Notes Specification 0.1.2
+# Linden Notes Specification 0.2.0
 
 The official Lindex Notes Specification.
 
-## Version History
-
-### 0.1.1
-
-Initial draft.
-
-### 0.1.2
-
-- All index file names added.
-- All conf file names added.
-- All conf options added.
 
 ## Application Setups
 
@@ -81,65 +70,25 @@ You do not need to backup the index directory.
 
 ## Files
 
-### Config Files in /linden-root/config
+### Config Files in /linden-root/wikiConfig
 
 There are three types of Linden Config Files.
 
 | config file                       | description            | mandatory |
 |-----------------------------------|------------------------|-----------|
-| L0-CONF-ROOT.yml                  | taxonomies to index    | yes       |
 | L1-CONF-TAX-#{tax}.yml            | taxonomy configuration | no        |
 | L2-CONF-TAX-#{tax}-TRM-{term}.yml | term configuration     | no        |
-
-#### L0-CONF-ROOT.yml
-
-*L0-CONF-ROOT.yml* is the main config file. All top level taxonomies are
-defined in this file. This gives your Linden Menu App a clue how to browse
-through your database. The indexer reads this configuration to created
-optimized index files.
-
-Here's an example of a small L0-CONF-ROOT.yml:
-
-```yaml
-
----
-taxonomies:
-  project:
-    type: has_many
-    top_level: true
-    features:
-      - sub_index
-
-  type:
-    type: has_many
-    top_level: true
-    features:
-      - sub_index
-```
-
-##### L0-CONF-ROOT.yml Options
-
-| key path                           | yaml-type              | description                                                                             | mandatory |
-|------------------------------------|------------------------|-----------------------------------------------------------------------------------------|-----------|
-| /taxonomies                        | hash                   | containing all indexed taxonomies                                                       | yes       |
-| ../SomeTaxonomy                    | hash                   | containing one taxonomy configuration                                                   | yes       |
-| ../../top_level                    | boolean                | Show this taxonomy at the root menu                                                     | no        |
-| ../../features                     | array with named flags | array with taxomy features                                                              | no        |
-| ../../features sub_index           | flags                  | ?                                                                                       | no        |
-| ../../features count_tasks         | flags                  | when set the indexer will write down the numbers of all open and closed checkboxes      | no        |
-| ../../type has_many                | string                 | tanomony feature telling terms in this taxonomy has many values                         | no        |
-| ../../type has_many_belong_to_many | string                 | tanomony feature telling terms in this taxonomy has many terms and belong to many terms | no        |
 
 #### L1-CONF-TAX-#{tax}.yml
 
 A L1-CONF file is optional. It's a yaml-file that configures one or more views
-when showing a taxonomy with it's terms. 
+when showing a taxonomy with it's terms.
 
 ##### L1-CONF-TAX Options
 
 | key path       | yaml-type          | description                                                        | mandatory                   | default      |
 |----------------|--------------------|--------------------------------------------------------------------|-----------------------------|--------------|
-| singular       | string             | The singular name of a taxonomy                                    | no                          | taxonony key |
+| starred        | boolean            | The singular name of a taxonomy                                    | no                          | taxonony key |
 | plural         | string             | The plural name of a taxonomy                                      | no                          | null         |
 | description    | string             | Taxonomy description                                               | no                          | null         |
 | views          | hash               | containing one or more views                                       | no                          | null         |
@@ -156,7 +105,7 @@ Here's an example L1-configuration:
 ```yaml
 
 ---
-singular: project
+starred: true
 plural: projects
 description: Projects private and commercial
 views:
@@ -201,7 +150,6 @@ when showing a term with it's values, which are markdown files.
 | views/[view_key]/sort_key | string             | if sort = frontmatter_key, this is the key used for sorting        | yes if sort=frontmatter_key | null     |
 | locations                 | hash               | containing one or more locations                                   | no                          | null     |
 | locations/[location_key]  | string             | URI of the external location, file, dir of webaddress              | no                          | null     |
-
 
 ##### Example of L2-CONF_TAX_project_TRM_linden.yml
 
@@ -263,4 +211,20 @@ All mardown files are stored in the /wiki subdirectory.
 | `L1-INDEX-TAX-#{taxonomy}.json`             | hash(string, hash)   | hash with names of terms and their properties as hash |             |
 | `L2-INDEX-TAX-#{taxonomy}-TRM-#{term}.json` | array(string)        | array with filenames of member documents in this term |             |
 
-#### 
+
+## Version History
+
+### 0.1.1
+
+Initial draft.
+
+### 0.1.2
+
+- All index file names added.
+- All conf file names added.
+- All conf options added.
+
+### 0.2.0
+
+- Removed L0 configuration
+- add starred to L1 config file

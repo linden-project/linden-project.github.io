@@ -25,14 +25,14 @@ welcome people to join me in designing and creating tools for having our extra
 brains.
 
 ## Specifications
-- [Linden Spec 0.1](docs/linden-specification/version-0.1)
+- [Linden Spec 0.2](docs/linden-specification/version-0.2)
 
 ## Editor Implementations
 - [linny.vim](https://github.com/linden-project/linny.vim)
 
 ## Indexers
 - [lindex](https://github.com/linden-project/lindex) - Linden Indexer implemented in crystal-lang
-- **Carl** - Indexer implemented with the hugo static site generator (Soon available)
+- [Carl](https://github.com/linden-project/carl) - Indexer implemented with the hugo static site generator
 
 ## Utilities
-- [fred](https://github.com/linden-project/fred) - Fred, a front matter cli editor 
+- [fred](https://github.com/linden-project/fred) - Fred, a front matter cli editor

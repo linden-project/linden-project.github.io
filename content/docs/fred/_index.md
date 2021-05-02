@@ -8,3 +8,5 @@ weight: 40
 
 Fred is a command line frontmatter editor.
 
+https://github.com/linden-project/fred
+
