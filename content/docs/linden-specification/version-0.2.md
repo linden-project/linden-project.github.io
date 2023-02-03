@@ -142,6 +142,7 @@ when showing a term with it's values, which are markdown files.
 | title                     | string             | The name of a term                                                 | no                          | term key |
 | description               | string             | Taxonomy description                                               | no                          | null     |
 | starred                   | boolean            | Make this term starred                                             | no                          | false    |
+| frontmatter_template      | hash               | key/values that are automatically set when creating new files      | no                          | null     |
 | views                     | hash               | containing one or more views                                       | no                          | null     |
 | views/[view_key]/group_by | string             | groups all terms by a scalar value in term conf                    | no                          | null     |
 | views/[view_key]/only     | array with scalars | only show terms having these scalars or IS_SET or IS_NOT_SET       | no                          | null     |
@@ -166,6 +167,9 @@ locations:
   gh.com/mipmip/linny.vim: https://github.com/mipmip/linny.vim
   gh.com/mipmip/lindex: https://github.com/mipmip/lindex
 type: Software Project
+frontmatter_template:
+  organization: Linden Project
+  profit: none
 views:
   type:
     group_by: type
