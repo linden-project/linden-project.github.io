@@ -12,7 +12,6 @@ bookToc: false
 <--->
 
 > "Everything is connected" Dirk Gently (Douglas Adams)
-
 {{< /columns >}}
 
 
@@ -26,15 +25,23 @@ brains.
 
 **To get started read the quick start tutorial [Your personal Wiki with Linny.vim and Carl](/posts/tutorial-linny-and-carl/)**
 
-## Specifications
+## Current projects
+
+{{< columns >}}
+### Specifications
 - [Linden Spec 0.2](docs/linden-specification/version-0.2)
 
-## Editor Implementations
-- [linny.vim](https://github.com/linden-project/linny.vim) - Personal Wiki and document database as Vim Plugin
+### Editor Implementations
+- [Linny.vim](https://github.com/linden-project/linny.vim) - Personal Wiki and document database as Vim Plugin
+<--->
+### Indexers
+- [Carl](https://github.com/linden-project/carl) - Indexer implemented with the hugo static site generator (spec-0.2)
+- [Lindex](https://github.com/linden-project/lindex) - Linden Indexer implemented in crystal-lang (DEPRECIATED) (spec-0.1)
 
-## Indexers
-- [lindex](https://github.com/linden-project/lindex) - Linden Indexer implemented in crystal-lang
-- [Carl](https://github.com/linden-project/carl) - Indexer implemented with the hugo static site generator
+### Utilities
+- [Fred](https://github.com/linden-project/fred) - Fred, a front matter cli editor
+{{< /columns >}}
 
-## Utilities
-- [fred](https://github.com/linden-project/fred) - Fred, a front matter cli editor
+## Latest Blog Posts
+
+{{< blogposts count=6 >}}

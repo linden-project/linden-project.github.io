@@ -1,6 +1,7 @@
 ---
-title: Your personal Wiki with Linny.vim and Carl
-date: 2021-05-3
+title: "Tutorial: Your personal Wiki with Linny.vim and Carl"
+author: "Pim Snel"
+date: 2021-05-03
 tags:
   - carl
   - linny.vim
