@@ -1,0 +1,15 @@
+{{ $count := .Get "count" | default 6 }}
+{{ $pages := where .Site.RegularPages "Section" "posts" }}
+
+<section class="section">
+  {{ range first $count $pages }}
+
+  <article class="markdown book-post">
+    <h4> <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a> </h4>
+    {{ with .Date }}
+      {{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}
+    {{ end }}
+  </article>
+
+{{ end }}
+</section>
